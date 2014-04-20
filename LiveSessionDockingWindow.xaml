@@ -1,0 +1,8 @@
+﻿<Window x:Class="LiveSessionDockingWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+     Height="100" Width="Auto"  WindowStyle="ToolWindow" ResizeMode="NoResize" Closing="Window_Closing_1" Title="SessionBar" HorizontalAlignment="Stretch"  >
+    <Grid>
+        
+    </Grid>
+</Window>

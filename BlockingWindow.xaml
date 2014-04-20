@@ -1,0 +1,14 @@
+﻿<Window x:Class="BlockingWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="BlockingWindow" Height="300" Width="300" Topmost="True" ResizeMode="NoResize" WindowState="Maximized" WindowStyle="None" WindowStartupLocation="CenterScreen" Opacity=".2" AllowsTransparency="True">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#33B4D812" Offset="0"/>
+            <GradientStop Color="#33FFDC00" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        
+    </Grid>
+</Window>

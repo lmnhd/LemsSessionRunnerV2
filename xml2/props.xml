@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<properties>
+  
+  <scripts>
+    <BOUNCE_SESSION_SCRIPT address="macros\bouncesession.scp"/>
+    
+    <START_SESSION_AUDITION_BEATS address="macros\startsessionauditionbeats.scp"/>
+    <CLEAN_CLOSE_SESSION address="macros\cleanclosesession.scp"/>
+    <BRING_TO_FRONT address="macros\bringsessionmanagertofront.scp"/>
+    <START_SESSION_WITH_BEAT address=""/>
+    <MACROS_DIRECTORY address="macros"/>
+    <DOUBLE_CHECK_LAST_SONGFOLDER_RENAME address="macros\updatelastsongfolder.scp"/>
+
+    <INTERNET_BEATS_DIRECTORY address="K:\wamp\www\mp3\Internet Beats\"/>
+    <CLOSE_SELECTED_DIRECTORY_WINDOW address="macros\closeselectdirectorywindow.scp"/>
+
+    <TEMPLATE_FILE address="tempstudb.npr"/>
+    <CLOSE_THIS address ="macros\closesessionstarter.scp"></CLOSE_THIS>
+    <RESTART_THIS address ="macros\restartsessionstarter.scp"/>
+    
+    <NUENDO_PATH address="C:\Users\BrickLyfeA\Desktop\NA\"  />
+    <MP3_PATH address="K:\wamp\www\mp3\"/>
+
+    <TEMPLATE_DIRECTORY address="TEMPLATE"/>
+
+    
+  </scripts>
+  
+</properties>
