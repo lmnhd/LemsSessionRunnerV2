@@ -640,7 +640,7 @@ Public Class SessionWindow
 
         LoginData.UpdateCurrentLoginInfoValue(LoginData.LoginInfoType.mode, LoginData.AppMode.loggedIn.ToString())
 
-        logdel(sess.Title + " Bounced and ready!!", "")
+        logdel(sess.Title + " Attempting to bounce", "")
 
 
 
@@ -1075,7 +1075,9 @@ Public Class SessionWindow
 
 
         'Dim selectedItem = ui_sessionsList.SelectedItem
-
+        MacroShop.killAllMacros()
+        Await Task.Delay(1000)
+        MacroShop.killAllMacros()
         If Not (Application.Floating_Player Is Nothing) Then
 
             Application.StopFloater(True)

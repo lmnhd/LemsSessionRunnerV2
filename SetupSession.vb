@@ -472,21 +472,21 @@ Public Class SetupSession
 
 
             'Await Task.Delay(2000)
-            Dim closeSessionWindow As Appbar.MainWindow = New Appbar.MainWindow
+            ' Dim closeSessionWindow As Appbar.MainWindow = New Appbar.MainWindow
             Application.BlockerWindow(False)
-            MacroShop.MaximizeNuendo()
+
 
 
             
 
-            If (Appbar.MainWindow.showNow) Then
+            If (True) Then
 
-                MacroShop.MinimizeNuendo()
+                'MacroShop.MinimizeNuendo()
 
 
                 Await Task.Delay(2000)
 
-
+                MacroShop.MaximizeNuendo()
 
                 Dim choose As CloseSessionOptions = CloseSessionDialog.showCloseSessionDialogue(liveSession.SongName, liveSession)
 
@@ -508,7 +508,7 @@ Public Class SetupSession
                         liveSession.GetMother().New_Song_Name = choose.SongTitle
 
 
-                      
+
 
 
 
@@ -1756,7 +1756,7 @@ Public Class SetupSession
     Private Function GetSessions() As ObservableCollection(Of Session)
         If SessionList Is Nothing Then
             SessionList = New ObservableCollection(Of Session)
-            SortSessions()
+
 
         End If
         Return SessionList

@@ -298,8 +298,8 @@ Class MainWindow
 
 
         ListBox1.Items.Clear()
-        ListBox1.Items.Add(NOT_REGISTERED)
-        ListBox1.Items.Add(" COLLAB")
+        'ListBox1.Items.Add(NOT_REGISTERED)
+        'ListBox1.Items.Add(" COLLAB")
 
         For Each item As Artist In artistsList
             ListBox1.Items.Add(item.My_Name)

@@ -102,7 +102,7 @@ Public Class SessionTimer
                             LoginData.UpdateCurrentLoginInfoValue(LoginData.LoginInfoType.overTime, "true")
                             Dim message = "Your time has been extended to " & DateTime.Now.Add(TimeSpan.FromMinutes(timeLeft)).TimeOfDay.ToString()
 
-                            MsgBox(message)
+                            'MsgBox(message)
                             Application.LemLog(message)
 
                         End If

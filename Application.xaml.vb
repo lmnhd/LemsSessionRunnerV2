@@ -1187,6 +1187,13 @@ Public Class Application
 
                             LemLog(artist.My_Name & " booked until " & Current_Booking.when.Add(TimeSpan.FromHours(Current_Booking.scheduledDuration)).TimeOfDay.ToString())
 
+                        ElseIf (Current_Booking.minutesLeftInCurrentBooking < 1) Then
+
+                            Application.Current_Booking = UNTAMEHTTP.CancelBooking(Current_Booking, LOCAL_HOST, LOCAL_HOST_ADDRESS)
+                            BookingResultHandler(Current_Booking)
+                            Application.Current_Booking = UNTAMEHTTP.QuickBookStudio(artist.My_Name, 4, LOCAL_HOST, LOCAL_HOST_ADDRESS)
+                            BookingResultHandler(Current_Booking)
+
                         ElseIf ((DateTime.Now.TimeOfDay >= Current_Booking.when.TimeOfDay.Add(TimeSpan.FromMinutes(30))) Or LOCAL_HOST) Then
                             Dim response = MsgBox("This will cancel " + Current_Booking.ArtistName + "'s booking...", MsgBoxStyle.OkCancel, "Cancel Current Booking?")
                             If (response = MsgBoxResult.Ok) Then
@@ -7370,6 +7377,8 @@ Public Class MacroShop
             Await Task.Delay(TimeSpan.FromSeconds(1))
         End While
 
+        killAllMacros()
+        Await Task.Delay(2000)
         If True Then
 
             Dim finalPath = session.GetArtist().RecordingPath + session.GetMother().New_Song_Name + ".wav"
